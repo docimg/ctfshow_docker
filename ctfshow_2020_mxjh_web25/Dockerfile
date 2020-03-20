@@ -1,6 +1,7 @@
 FROM docimg/baseimg_mysql_php73_apache
 
 COPY _files /tmp/
+COPY /tmp/flag.sh /flag.sh
 COPY src /var/www/html
 
 RUN sh -c 'mysqld_safe &' \
@@ -9,8 +10,6 @@ RUN sh -c 'mysqld_safe &' \
     && mysql -e "source /var/www/html/db.sql;" -uroot -pctfshow \
     # configure file
     && mv /tmp/php.ini /usr/local/etc/php \
-    && mv /tmp/flag.sh /flag.sh \
-    && chmod +x /flag.sh \
     # clear
     && rm -rf /var/www/html/db.sql \
     && rm -rf /tmp/*
@@ -19,4 +18,4 @@ WORKDIR /var/www/html
 
 EXPOSE 80
 
-CMD ["/bin/bash", "-c", "docker-php-entrypoint"]
+
