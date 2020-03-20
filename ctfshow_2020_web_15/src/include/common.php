@@ -4,7 +4,7 @@ error_reporting(0);
 header('Content-Type: text/html; charset=UTF-8');
 define('IN_CRONLITE', true);
 define('ROOT', dirname(__FILE__).'/');
-define('LOGIN_KEY', 'abchdbb768526');
+define('LOGIN_KEY', 'qweasdzxc5');
 date_default_timezone_set("PRC");
 $date = date("Y-m-d H:i:s");
 session_start();
