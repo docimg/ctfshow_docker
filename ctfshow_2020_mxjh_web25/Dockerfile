@@ -13,9 +13,10 @@ RUN sh -c 'mysqld_safe &' \
     && chmod +x /flag.sh \
     # clear
     && rm -rf /var/www/html/db.sql \
-    && rm -rf /tmp/* \
-    && source /flag.sh
+    && rm -rf /tmp/*
 
 WORKDIR /var/www/html
 
 EXPOSE 80
+
+CMD ["/bin/bash", "source /flag.sh"]
