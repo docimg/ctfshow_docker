@@ -1,0 +1,11 @@
+version: '2'
+services:
+  web:
+    build: .
+    image: ctfshow/ctfshow_2020_web_15
+    ports:
+        - "80"
+    volumes:
+        - ./src:/var/www/html/
+    command: 
+        - /var/www/html/run.sh

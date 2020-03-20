@@ -1,5 +1,4 @@
-#!/bin/bash
-
+#! /usr/bin/env bash
 if [[ -z $FLAG_COLUMN ]]; then
 	FLAG_COLUMN="ffff1a9"
 fi
@@ -11,7 +10,7 @@ fi
 mysql -e "USE ctfshow_web; \
 	ALTER TABLE FLAG_TABLE CHANGE FLAG_COLUMN $FLAG_COLUMN varchar(128) NOT NULL DEFAULT 'not_flag'; \
 	ALTER TABLE FLAG_TABLE RENAME $FLAG_TABLE; \
-	INSERT $FLAG_TABLE VALUES('${FLAG:0:14}');" -uroot -pctfshow
+	INSERT INTO $FLAG_TABLE VALUES('${FLAG:0:14}');" -uroot -pctfshow
 
 echo ${FLAG:14:14} > /flag
 
