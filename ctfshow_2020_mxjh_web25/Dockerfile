@@ -3,7 +3,7 @@ FROM docimg/baseimg_mysql_php73_apache
 COPY _files /tmp/
 COPY src /var/www/html
 
-RUN mysqladmin -uroot -proot password 'ctfshow' --socket=/run/mysqld/mysqld.sock --user=root --password=root \
+RUN mysqladmin -uroot -proot password 'ctfshow' \
     && mysql -e "source /var/www/html/db.sql;" -uroot -pctfshow \
     # configure file
     && mv /tmp/php.ini /usr/local/etc/php \
