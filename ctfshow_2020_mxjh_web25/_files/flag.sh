@@ -19,4 +19,4 @@ export FLAG=${FLAG:28:14}
 unset FLAG_TABLE
 unset FLAG_COLUMN
 
-rm -rf /flag.sh
+rm -rf /tmp/flag.sh

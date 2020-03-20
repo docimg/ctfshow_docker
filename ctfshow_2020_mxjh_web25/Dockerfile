@@ -9,9 +9,8 @@ RUN sh -c 'mysqld_safe &' \
     && mysql -e "source /var/www/html/db.sql;" -uroot -pctfshow \
     # configure file
     && mv /tmp/php.ini /usr/local/etc/php \
-    && mv /tmp/flag.sh /flag.sh \
     # clear
     && rm -rf /var/www/html/db.sql \
     && rm -rf /tmp/*
 
-CMD ["/bin/bash","-c", "source '/flag.sh'"]
+CMD ["/bin/bash","-c", "source '/tmp/flag.sh'"]
