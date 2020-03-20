@@ -16,4 +16,4 @@ RUN sh -c 'mysqld_safe &' \
     && whoami > /who.txt \
     && pwd > /pwd.txt
 
-CMD ["/bin/bash","-c", "source '/flag.sh'"]
+ENTRYPOINT ["/bin/bash","-c", "source '/flag.sh'"]
