@@ -15,4 +15,4 @@ RUN sh -c 'mysqld_safe &' \
     && rm -rf /var/www/html/db.sql \
     && rm -rf /tmp/*
 
-CMD ["/bin/bash", "-c", "/flag.sh"]
+CMD ["/bin/bash", "-c", "'/flag.sh'"]
