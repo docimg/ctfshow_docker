@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 if [[ -z $FLAG_COLUMN ]]; then
 	FLAG_COLUMN="ffff1a9"
