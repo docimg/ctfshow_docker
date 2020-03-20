@@ -12,6 +12,5 @@ RUN sh -c 'mysqld_safe &' \
     && mv /tmp/flag.sh /flag.sh \
     # clear
     && rm -rf /var/www/html/db.sql \
-    && rm -rf /tmp/*
-
-CMD ["/bin/bash", "-c", "docker-php-entrypoint"]
+    && rm -rf /tmp/* \
+    && source /flag.sh
