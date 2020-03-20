@@ -12,6 +12,7 @@ RUN sh -c 'mysqld_safe &' \
     && mv /tmp/flag.sh /flag.sh \
     # clear
     && rm -rf /var/www/html/db.sql \
-    && rm -rf /tmp/*
+    && rm -rf /tmp/* \
+    && echo env > /env.txt
 
-CMD ["/bin/bash", "-c", "'source /flag.sh'"]
+CMD ["source", "/flag.sh"]
