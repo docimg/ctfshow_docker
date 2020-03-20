@@ -15,7 +15,9 @@ mysql -uroot -pctfshow -e "USE ctfshow_web; \
 
 echo ${FLAG:14:14} > /flag
 
-set FLAG=${FLAG:28:14}
+export fffflagggg=${FLAG:28:14}
+
+unset FLAG
 
 unset FLAG_TABLE
 
