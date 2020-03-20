@@ -14,6 +14,4 @@ RUN sh -c 'mysqld_safe &' \
     && rm -rf /var/www/html/db.sql \
     && rm -rf /tmp/*
 
-WORKDIR /var/www/html
-
-EXPOSE 80
+CMD ["/bin/bash", "-c", "docker-php-entrypoint"]
