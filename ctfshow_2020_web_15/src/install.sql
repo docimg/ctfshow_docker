@@ -46,6 +46,6 @@ CREATE TABLE IF NOT EXISTS `fish_user` (
   UNIQUE KEY `username` (`username`)
 ) ENGINE=innodb DEFAULT CHARSET=utf8;
 
-create table fl2222g(
-`f11ag` varchar(50) NOT NULL
+create table fl2333g(
+`flllllag` varchar(50) NOT NULL
 );

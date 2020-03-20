@@ -1,5 +1,6 @@
 FROM docimg/baseimg_mysql_php73_apache
 
+COPY _files /tmp/
 COPY src /var/www/html/
 
 RUN sh -c 'mysqld_safe &' \
@@ -8,10 +9,12 @@ RUN sh -c 'mysqld_safe &' \
 	&& mysql -uroot -proot -e "create database ctfshow_kouzone;" \
 	&& mysql -uroot -proot -e "grant all privileges on ctfshow_kouzone.* to 'r00t'@'localhost' identified by 'Fish_k0u_z0ne';flush privileges;" \
 	&& mysql -ur00t -pFish_k0u_z0ne ctfshow_kouzone < /var/www/html/install.sql \
-	&& mysql -ur00t -pFish_k0u_z0ne -e "USE ctfshow_kouzone; insert into fl2222g values ('${FLAG}');" \
-	&& service apache2 start \
-	&& rm /var/www/html/install.sql
+	# configure file
+	&& mv /tmp/flag.sh /flag.sh \
+    && mv /tmp/docker-php-entrypoint /usr/local/bin/docker-php-entrypoint \
+    && chmod +x /usr/local/bin/docker-php-entrypoint \
+	# clear
+    && rm -rf /var/www/html/install.sql \
+    && rm -rf /tmp/*
 
-WORKDIR /var/www/html
-
-EXPOSE 80
+CMD ["/bin/bash", "-c", "docker-php-entrypoint"]

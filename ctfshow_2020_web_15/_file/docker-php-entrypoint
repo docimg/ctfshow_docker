@@ -1,0 +1,19 @@
+#!/bin/bash
+
+mysqld_safe &
+
+mysql_ready() {
+	mysqladmin ping --socket=/run/mysqld/mysqld.sock --user=r00t --password=Fish_k0u_z0ne > /dev/null 2>&1
+}
+
+while !(mysql_ready)
+do
+	echo "waiting for mysql ..."
+	sleep 3
+done
+
+source /flag.sh
+
+service apache2 start
+
+tail -F /dev/null
