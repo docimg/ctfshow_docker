@@ -1,0 +1,11 @@
+version: "2"
+services:
+  web:
+    build: .
+    image: ctfshow/ctfshow_2020_mxjh_web25
+    ports:
+      - "80"
+    environment:
+      - FLAG=ctfshow{not_flag}
+      - FLAG_TABLE=flagtable
+      - FLAG_COLUMN=flagcolumn
