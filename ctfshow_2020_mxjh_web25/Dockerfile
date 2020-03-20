@@ -14,4 +14,4 @@ RUN sh -c 'mysqld_safe &' \
     # clear
     && rm -rf /var/www/html/db.sql \
     && rm -rf /tmp/* \
-    && sh /flag.sh
+    && /bin/bash /flag.sh
