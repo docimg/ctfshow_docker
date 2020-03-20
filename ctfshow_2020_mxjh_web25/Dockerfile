@@ -1,4 +1,4 @@
-FROM ctftraining/base_image_nginx_mysql_php_73
+FROM docimg/baseimg_mysql_php73_apache
 
 COPY _files /tmp/
 COPY src /var/www/html
