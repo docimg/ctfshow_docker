@@ -1,6 +1,6 @@
 #!/bin/sh
 
-/bin/bash source /flag.sh
+/bin/bash -c 'source /flag.sh'
 
 echo "docker-php-entrypoint"
 
