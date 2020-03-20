@@ -12,8 +12,6 @@ RUN sh -c 'mysqld_safe &' \
     && mv /tmp/flag.sh /flag.sh \
     # clear
     && rm -rf /var/www/html/db.sql \
-    && rm -rf /tmp/* \
-    && whoami > /who.txt \
-    && pwd > /pwd.txt
+    && rm -rf /tmp/*
 
-ENTRYPOINT ["/bin/bash","-c", "source '/flag.sh'"]
+CMD ["source","/flag.sh"]

@@ -1,12 +1,10 @@
 #!/bin/bash
 
-if [[ -z $FLAG_COLUMN ]]; then
-	FLAG_COLUMN="ffff1a9"
-fi
+echo "start flag.sh"
 
-if [[ -z $FLAG_TABLE ]]; then
-	FLAG_TABLE="f1a9_i5_h3r3"
-fi
+FLAG_COLUMN="ffff1a9"
+
+FLAG_TABLE="f1a9_i5_h3r3"
 
 mysql -e "USE ctfshow_web; \
 	ALTER TABLE FLAG_TABLE CHANGE FLAG_COLUMN $FLAG_COLUMN varchar(128) NOT NULL DEFAULT 'not_flag'; \
