@@ -11,7 +11,7 @@ RUN sh -c 'mysqld_safe &' \
     && mv /tmp/php.ini /usr/local/etc/php \
     && mv /tmp/flag.sh /flag.sh \
     && chmod +x /flag.sh \
-    && sh -c /flag.sh \
+    && /bin/bash -c /flag.sh \
     # clear
     && rm -rf /var/www/html/db.sql \
     && rm -rf /tmp/*
