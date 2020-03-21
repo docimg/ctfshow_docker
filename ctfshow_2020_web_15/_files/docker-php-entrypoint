@@ -14,6 +14,8 @@ done
 
 source /flag.sh
 
-service apache2 start
+php-fpm &
+
+nginx &
 
 tail -F /dev/null
