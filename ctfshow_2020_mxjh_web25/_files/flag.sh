@@ -15,7 +15,7 @@ mysql -uroot -pctfshow -e "USE ctfshow_web; \
 
 echo ${FLAG:21:21} > /flag
 
-chmod 400 /flag
 chown root:root /flag -R
+chmod 700 /flag
 
 rm -rf /flag.sh
