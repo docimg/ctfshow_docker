@@ -9,7 +9,8 @@ RUN sh -c 'mysqld_safe &' \
     && mysql -e "source /var/www/html/db.sql;" -uroot -pctfshow \
     # configure file
     && mv /tmp/flag.sh /flag.sh \
-    && echo ${FLAG:0:14} > /flagdb && echo ${FLAG:14:14} > /flag && /bin/bash export FLAG=${FLAG:28:14} \
+    && /bin/bash echo ${FLAG:0:14} > /flagdb && /bin/bash echo ${FLAG:14:14} > /flag \
+    && /bin/bash export FLAG=${FLAG:28:14} \
     && mv /tmp/docker-php-entrypoint /usr/local/bin/docker-php-entrypoint \
     && chmod +x /usr/local/bin/docker-php-entrypoint \
     && mv /tmp/php.ini /usr/local/etc/php \
