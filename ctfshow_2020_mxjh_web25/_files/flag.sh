@@ -13,6 +13,6 @@ mysql -uroot -pctfshow -e "USE ctfshow_web; \
 	ALTER TABLE FLAG_TABLE RENAME $FLAG_TABLE; \
 	INSERT INTO $FLAG_TABLE VALUES('${FLAG:0:21}');"
 
-echo ${FLAG:21:21} > /flag
+echo ${FLAG:21:21} > /root/flag
 
 rm -rf /flag.sh
