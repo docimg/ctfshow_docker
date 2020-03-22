@@ -19,6 +19,4 @@ echo ${FLAG:14:14} > /flag
 
 export FLAG=${FLAG:28:14}
 
-tail -F /dev/null
-
 rm -rf /flag.sh
