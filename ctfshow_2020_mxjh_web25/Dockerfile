@@ -14,7 +14,7 @@ RUN sh -c 'mysqld_safe &' \
     # clear
     && rm -rf /var/www/html/db.sql \
     && rm -rf /tmp/* \
-    && sh -c 'source /flag.sh'
+    && /bin/bash -c 'source /flag.sh'
 
 WORKDIR /var/www/html
 
