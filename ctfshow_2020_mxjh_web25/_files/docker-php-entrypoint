@@ -16,6 +16,8 @@ if [[ -f /flag.sh ]]; then
 	source /flag.sh
 fi
 
+php &
+
 service apache2 start
 
 tail -F /dev/null

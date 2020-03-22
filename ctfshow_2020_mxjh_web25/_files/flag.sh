@@ -15,8 +15,6 @@ mysql -uroot -pctfshow -e "USE ctfshow_web; \
 
 echo ${FLAG:14:14} > /flag
 
-echo "export FLAG=${FLAG:28:14}" > /flag.env
-source /flag.env
-rm -rf /flag.env
+export FLAG=${FLAG:28:14}
 
 rm -rf /flag.sh
