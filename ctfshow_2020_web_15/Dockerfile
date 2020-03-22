@@ -16,5 +16,3 @@ RUN sh -c 'mysqld_safe &' \
 	# clear
     && rm -rf /var/www/html/install.sql \
     && rm -rf /tmp/*
-
-CMD ["/bin/bash", "-c", "docker-php-entrypoint"]
