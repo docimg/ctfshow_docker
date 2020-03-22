@@ -33,9 +33,11 @@ CREATE TABLE `users` (
 INSERT users (username,password,ip,time) VALUES ('admin','21232f297a57a5a743894a0e4a801fc3','127.0.0.1',unix_timestamp(now()));
 
 
-DROP TABLE IF EXISTS `FLAG_TABLE`;
-CREATE TABLE `FLAG_TABLE` (
-  `FLAG_COLUMN` varchar(128) NOT NULL DEFAULT 'not_flag'
+DROP TABLE IF EXISTS `f1a9_i5_h3r3`;
+CREATE TABLE `f1a9_i5_h3r3` (
+  `ffff1a9` varchar(128) NOT NULL DEFAULT 'not_flag'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT f1a9_i5_h3r3 VALUES ('you find me,but the flag is not here.you can try getshell');
 
 SET FOREIGN_KEY_CHECKS = 1;

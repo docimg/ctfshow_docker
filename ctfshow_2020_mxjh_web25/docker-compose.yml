@@ -7,5 +7,3 @@ services:
       - "80"
     environment:
       - FLAG=ctfshow{not_flag}
-      - FLAG_TABLE=flagtable
-      - FLAG_COLUMN=flagcolumn

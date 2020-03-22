@@ -1,3 +1,3 @@
 <?php
-	$flag="flag is not here,but i can tell you the flag is divided into three parts";
+	$flag="you can find the flag in the env,but you may bypass disable_function";
 ?>
