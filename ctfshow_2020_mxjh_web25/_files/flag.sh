@@ -15,10 +15,6 @@ mysql -uroot -pctfshow -e "USE ctfshow_web; \
 
 echo ${FLAG:14:14} > /flag
 
-export FLAG=${FLAG:28:14}
-
-unset FLAG_TABLE
-
-unset FLAG_COLUMN
+export flag=${FLAG:28:14}
 
 rm -rf /flag.sh
