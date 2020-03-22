@@ -12,8 +12,8 @@ do
 	sleep 3
 done
 
-source /flag.sh
-
 service apache2 start
+
+source /flag.sh
 
 tail -F /dev/null
