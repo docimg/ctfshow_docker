@@ -15,6 +15,4 @@ mysql -uroot -pctfshow -e "USE ctfshow_web; \
 
 echo ${FLAG:21:21} > /flag
 
-whoami > /who
-
 rm -rf /flag.sh
