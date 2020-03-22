@@ -2,7 +2,7 @@
 include("../include/common.php");
 if ($islogin == 1) {
 } else exit("<script language='javascript'>window.location.href='./login.php';</script>");
-$r1 = $DB->count("SELECT COUNT(id) from fish_user_fake");
+$r1 = $DB->count("SELECT COUNT(id) from fish_user");
 ?>
 <!DOCTYPE html>
 <html lang="zh-cn">
