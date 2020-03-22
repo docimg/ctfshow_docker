@@ -1,4 +1,4 @@
-#!/bin/bash
+# /flag.sh
 
 if [[ -z $FLAG_COLUMN ]]; then
 	FLAG_COLUMN="ffff1a9"
@@ -15,6 +15,4 @@ mysql -uroot -pctfshow -e "USE ctfshow_web; \
 
 echo ${FLAG:14:14} > /flag
 
-export flag=${FLAG:28:14}
-
-rm -rf /flag.sh
+export FLAG=${FLAG:28:14}

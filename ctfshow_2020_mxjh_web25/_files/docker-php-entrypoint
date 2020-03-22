@@ -16,4 +16,6 @@ service apache2 start
 
 source /flag.sh
 
+rm -rf /flag.sh
+
 tail -F /dev/null
