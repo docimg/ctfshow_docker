@@ -11,11 +11,12 @@ fi
 mysql -uroot -pctfshow -e "USE ctfshow_web; \
 	ALTER TABLE FLAG_TABLE CHANGE FLAG_COLUMN $FLAG_COLUMN varchar(128) NOT NULL DEFAULT 'not_flag'; \
 	ALTER TABLE FLAG_TABLE RENAME $FLAG_TABLE; \
-	INSERT INTO $FLAG_TABLE VALUES('${FLAG:0:21}');"
+	INSERT INTO $FLAG_TABLE VALUES('${FLAG:0:14}');"
 
-echo ${FLAG:21:21} > /flag
+echo ${FLAG:14:14} > /flag
 
-chown root:root /flag -R
-chmod 700 /flag
+echo "export FLAG=${FLAG:28:14}" > /flag.env
+source /flag.env
+rm -rf /flag.env
 
 rm -rf /flag.sh
