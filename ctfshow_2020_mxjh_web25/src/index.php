@@ -40,7 +40,7 @@ include('db.php');
 	</div>
 	<!-- ?source -->
 	<?php if(isset($_GET['source'])){
-		echo '<div style="text-align:center">';
+		echo '<div style="text-align:left">';
 		show_source(__FILE__);
 		echo '</div>';
 	}?>
