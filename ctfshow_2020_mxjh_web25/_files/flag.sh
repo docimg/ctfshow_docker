@@ -8,13 +8,14 @@ if [[ -z $FLAG_TABLE ]]; then
 	FLAG_TABLE="f1a9_i5_h3r3"
 fi
 
+if [[ -f /flagdb ]]; then
+	FLAG=${cat /flagdb}
+	rm -rf /flagdb
+fi
+
 mysql -uroot -pctfshow -e "USE ctfshow_web; \
 	ALTER TABLE FLAG_TABLE CHANGE FLAG_COLUMN $FLAG_COLUMN varchar(128) NOT NULL DEFAULT 'not_flag'; \
 	ALTER TABLE FLAG_TABLE RENAME $FLAG_TABLE; \
-	INSERT INTO $FLAG_TABLE VALUES('${FLAG:0:14}');"
-
-echo ${FLAG:14:14} > /flag
-
-export FLAG=${FLAG:28:14}
+	INSERT INTO $FLAG_TABLE VALUES('$FLAG');"
 
 rm -rf /flag.sh
