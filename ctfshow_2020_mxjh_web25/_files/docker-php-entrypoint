@@ -12,10 +12,10 @@ do
 	sleep 3
 done
 
+if [[ -f /flag.sh ]]; then
+	source /flag.sh
+fi
+
 service apache2 start
-
-source /flag.sh
-
-rm -rf /flag.sh
 
 tail -F /dev/null
