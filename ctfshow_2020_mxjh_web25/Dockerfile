@@ -19,4 +19,4 @@ WORKDIR /var/www/html
 
 EXPOSE 80
 
-CMD ["source", "-c", "/flag.sh"]
+CMD ["source", "/flag.sh"]
