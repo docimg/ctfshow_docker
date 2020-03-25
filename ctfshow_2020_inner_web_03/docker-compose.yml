@@ -1,0 +1,7 @@
+version: '2'
+services:
+  web:
+    build: .
+    image: ctfshow/ctfshow_2020_inner_web_03
+    ports:
+        - "80"

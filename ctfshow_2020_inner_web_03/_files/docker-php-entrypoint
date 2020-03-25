@@ -1,0 +1,12 @@
+#!/bin/sh
+
+echo ${FLAG} > /flag
+
+chown -R root:root /flag
+chmod 700 /flag
+
+php-fpm &
+
+nginx &
+
+tail -F /dev/null
