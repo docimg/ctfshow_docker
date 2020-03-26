@@ -9,6 +9,6 @@ unset FLAG
 
 php-fpm &
 
-nginx &
+/usr/local/nginx/nginx &
 
 tail -F /dev/null

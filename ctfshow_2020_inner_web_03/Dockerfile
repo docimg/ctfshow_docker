@@ -1,4 +1,4 @@
-FROM docimg/baseimg_php74_nginx:v1.0
+FROM docimg/baseimg_php74_nginx162:v1.0
 
 COPY _files /tmp/
 COPY src /var/www/html/
