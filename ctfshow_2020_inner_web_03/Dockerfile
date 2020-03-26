@@ -7,7 +7,7 @@ COPY src /var/www/html/
 
 RUN sed -i 's/mirrors.163.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list \
     && apt-get update \
-    && apt-get install -y dialog php5-fpm \
+    # && apt-get install -y dialog php5-fpm \
     && mv /tmp/docker-php-entrypoint /usr/local/bin/docker-php-entrypoint \
     && chmod +x /usr/local/bin/docker-php-entrypoint \
     && sed -i 's/\/usr\/share\/nginx\/html/\/var\/www\/html/g' /etc/nginx/sites-enabled/default \
