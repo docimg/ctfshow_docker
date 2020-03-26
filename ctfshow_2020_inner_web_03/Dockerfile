@@ -10,7 +10,9 @@ RUN mv /tmp/docker-php-entrypoint /usr/local/bin/docker-php-entrypoint \
     && sed -i 's/\/usr\/share\/nginx\/html/\/var\/www\/html/g' /etc/nginx/sites-enabled/default \
     && sed -i 's/index.htm;/index.php;/g' /etc/nginx/sites-enabled/default \
     && sed -i 's/\/var\/www;/\/var\/www\/html;/g' /etc/nginx/sites-enabled/default \
-    && chown -R www-data:www-data /var/www/html
+    && chown -R www-data:www-data /var/www/html \
+    && rm -rf /bin/sh \
+    && ln -s /bin/bash /bin/sh
 
 WORKDIR /var/www/html
 
