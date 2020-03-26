@@ -6,12 +6,15 @@ COPY _files /tmp/
 COPY src /var/www/html/
 
 RUN mv /tmp/docker-php-entrypoint /usr/local/bin/docker-php-entrypoint \
-    && echo "1 *	* * *	root    /usr/sbin/logrotate -vf /etc/logrotate.d/nginx" >> /etc/crontab \
     && chmod +x /usr/local/bin/docker-php-entrypoint \
+    # nginx config
     && sed -i 's/\/usr\/share\/nginx\/html/\/var\/www\/html/g' /etc/nginx/sites-enabled/default \
     && sed -i 's/index.htm;/index.php;/g' /etc/nginx/sites-enabled/default \
     && sed -i 's/\/var\/www;/\/var\/www\/html;/g' /etc/nginx/sites-enabled/default \
     && chown -R www-data:www-data /var/www/html \
+    # chufa loudong
+    && echo "* *	* * *	root    /usr/sbin/logrotate -vf /etc/logrotate.d/nginx" >> /etc/crontab \
+    # fix sh
     && rm -rf /bin/sh \
     && ln -s /bin/bash /bin/sh
 
