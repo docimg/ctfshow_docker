@@ -5,6 +5,8 @@ echo ${FLAG} > /flag
 chown -R root:root /flag
 chmod 700 /flag
 
+unset FLAG
+
 php-fpm &
 
 nginx &
