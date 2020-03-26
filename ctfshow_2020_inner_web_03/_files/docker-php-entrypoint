@@ -7,8 +7,8 @@ chmod 700 /flag
 
 unset FLAG
 
-php-fpm &
+php5-fpm &
 
-/usr/local/nginx/nginx &
+nginx &
 
 tail -F /dev/null
