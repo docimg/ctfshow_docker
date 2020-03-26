@@ -5,7 +5,7 @@ echo ${FLAG} > /flag
 chown -R root:root /flag
 chmod 700 /flag
 
-unset FLAG
+export FLAG=NULL
 
 php-fpm &
 
