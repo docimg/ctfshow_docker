@@ -13,7 +13,7 @@ RUN mv /tmp/docker-php-entrypoint /usr/local/bin/docker-php-entrypoint \
     && sed -i 's/\/var\/www;/\/var\/www\/html;/g' /etc/nginx/sites-enabled/default \
     && chown -R www-data:www-data /var/www/html \
     # chufa loudong
-    && echo "* *	* * *	root    /usr/sbin/logrotate -vf /etc/logrotate.d/nginx" >> /etc/crontab \
+    && echo "*/1 *	* * *	root    /usr/sbin/logrotate -vf /etc/logrotate.d/nginx" >> /etc/crontab \
     # fix sh
     && rm -rf /bin/sh \
     && ln -s /bin/bash /bin/sh
