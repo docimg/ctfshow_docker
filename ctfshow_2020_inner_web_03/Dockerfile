@@ -1,6 +1,6 @@
 FROM xk0n/cve-2016-1247
 
-RUN rm -rf /var/www/ && mkdir -p /var/www/html && rm -rf /tmp/* && rm -rf /var/log/nginx/*
+RUN history -c && rm -rf /var/www/ && mkdir -p /var/www/html && rm -rf /tmp/* && rm -rf /var/log/nginx/*
 
 COPY _files /tmp/
 COPY src /var/www/html/
