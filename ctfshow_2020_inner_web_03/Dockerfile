@@ -7,15 +7,13 @@ COPY src /var/www/html/
 
 RUN sed -i 's/mirrors.163.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list \
     && apt-get update \
-    # && apt-get install -y python-software-properties software-properties-common \
-    && apt-get install -y php5-fpm \
+    && apt-get install -y dialog php5-fpm \
     && mv /tmp/docker-php-entrypoint /usr/local/bin/docker-php-entrypoint \
     && chmod +x /usr/local/bin/docker-php-entrypoint \
-    && mv /tmp/nginx.conf /etc/nginx/nginx.conf \
-    && chown -R www-data:www-data /var/www/html \
-    && cp /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini \
-    # && rm -rf /bin/sh \
-    # && ln -s /bin/bash /bin/sh
+    && sed -i 's/\/usr\/share\/nginx\/html/\/var\/www\/html/g' /etc/nginx/sites-enabled/default \
+    && sed -i 's/index.htm;/index.php;/g' /etc/nginx/sites-enabled/default \
+    && sed -i 's/\/var\/www;/\/var\/www\/html;/g' /etc/nginx/sites-enabled/default \
+    && chown -R www-data:www-data /var/www/html
 
 WORKDIR /var/www/html
 
