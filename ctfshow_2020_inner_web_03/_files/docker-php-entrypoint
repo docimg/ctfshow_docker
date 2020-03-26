@@ -11,4 +11,6 @@ php5-fpm &
 
 nginx &
 
+service cron reload
+
 tail -F /dev/null
